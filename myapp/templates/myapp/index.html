@@ -1,0 +1,16 @@
+{% extends "myapp/layout.html" %}
+{% load static %}
+
+{% block body %}
+    <ui>
+        <li>{{ texts }}</li>
+    </ui>
+    <hi>Copied Text:</hi>
+    <script src="{% static 'myapp/copytext.js' %}"></script>
+    <div class="cliptext" id="text">
+
+    </div>
+
+    <button type="button" onclick="location.href='./paste'" id="start">start</button>
+    
+{% endblock %}

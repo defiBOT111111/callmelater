@@ -1,0 +1,18 @@
+{% extends "myapp/layout.html" %}
+{% load static %}
+
+{% block body %}
+<script src="{% static 'myapp/note.js' %}"></script>
+<div id="copied"><p></p></div>
+<!-- <script src="{% static 'myapp/readtext.js' %}"></script> -->
+<h1>Hello</h1>
+りんごばななはちみつりんごばななはちみつ
+<h2>{{copied}}</h2>
+<div class="cliptext" id="text"></div>
+
+<input type="button" value="Exec_" onclick="readText()"/>
+<input type="button" value="Stop_" onclick="stopPaste()"/>
+<button type="button" onclick="location.href='./'"  id="back">back</button>
+
+<script src="{% static 'myapp/readtext.js' %}"></script>
+{% endblock %}
